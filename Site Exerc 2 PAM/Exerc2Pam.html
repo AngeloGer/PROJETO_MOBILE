@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <link rel="stylesheet" href="Sitestyle.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site para compras</title>
+</head>
+<body>
+    
+    <form method="post" id="forms">
+        <div class="listaProdutos1">
+            <p align="center">Produtos:</p>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input1" class="prodCheck" data-valor="19.90">
+                    <label for="Input1">Camiseta Regata</label>
+                </div>
+                <span>R$19,90</span>
+                <input id="inpquant1" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input2" class="prodCheck" data-valor="59.90">
+                    <label for="Input2">Camisa Social</label>
+                </div>
+                <span>R$59,90</span>
+                <input id="inpquant2" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input3" class="prodCheck" data-valor="119.90">
+                    <label for="Input3">Blusa</label>
+                </div>
+                <span>R$119,90</span>
+                <input id="inpquant3" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input4" class="prodCheck" data-valor="39.90">
+                    <label for="Input4">Pullover</label>
+                </div>
+                <span>R$39,90</span>
+                <input id="inpquant4" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input5" class="prodCheck" data-valor="99.90">
+                    <label for="Input5">Sapato</label>
+                </div>
+                <span>R$99,90</span>
+                <input id="inpquant5" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input6" class="prodCheck" data-valor="38.90">
+                    <label for="Input6">Calça</label>
+                </div>
+                <span>R$38,90</span>
+                <input id="inpquant6" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input7" class="prodCheck" data-valor="9.90">
+                    <label for="Input7">Meias</label>
+                </div>
+                <span>R$9,90</span>
+                <input id="inpquant7" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input8" class="prodCheck" data-valor="24.90">
+                    <label for="Input8">Luvas</label>
+                </div>
+                <span>R$24,90</span>
+                <input id="inpquant8" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input9" class="prodCheck" data-valor="329.90">
+                    <label for="Input9">Jaqueta</label>
+                </div>
+                <span>R$329,90</span>
+                <input id="inpquant9" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input10" class="prodCheck" data-valor="69.90">
+                    <label for="Input10">Bermuda</label>
+                </div>
+                <span>R$69,90</span>
+                <input id="inpquant10" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input11" class="prodCheck" data-valor="14.90">
+                    <label for="Input11">Chinelo</label>
+                </div>
+                <span>R$14,90</span>
+                <input id="inpquant11" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            <div class="linha">
+                <div class="infoProduto">
+                    <input type="checkbox" id="Input12" class="prodCheck" data-valor="6.90">
+                    <label for="Input12">Boné</label>
+                </div>
+                <span>R$6,90</span>
+                <input id="inpquant12" type="number" class="inpQuant" placeholder="1" min="1">
+            </div>
+            
+        </div>
+
+        <div class="pagamento1">
+            <h2>Total: R$ <span id="valorTotalText">0.00</span></h2>
+            <div class="item1">
+                <input type="radio" id="checkmark1" name="optcompra" value="Vista" checked>
+                <label for="checkmark1">À Vista</label>
+            </div> 
+            <div class="item1">
+                <input type="radio" id="checkmark2" name="optcompra" value="Credito">
+                <label for="checkmark2">À Prazo</label>
+            </div>
+            <div class="item1"></div>
+                <label for="parcelas1">Quantidade de Parcelas:</label>
+                <select id="parcelas1" name="parcelas">
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            <button type="button" id="btnPagar">Pagar</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        let valorTotal = document.getElementById("valorTotalText");;
+
+        const btnPagar = document.getElementById("btnPagar");
+        const produtos = document.querySelectorAll(".prodCheck");
+        const quantidades = document.querySelectorAll(".inpQuant");
+        const checkmark1 = document.getElementById("checkmark1");
+        const checkmark2 = document.getElementById("checkmark2");
+        const parcelas1 = document.getElementById("parcelas1");
+
+        function tipoPagamento () {
+            parcelas1.disabled = checkmark1.checked;
+        }
+
+        function calculoTotal() {
+
+            let total = 0;
+            let quantParcelas = parseInt(parcelas1.value);
+
+            produtos.forEach((produto, index) => {
+
+                if (produto.checked) {
+                    let preco = parseFloat(produto.dataset.valor);
+                    let quantidade = parseInt(quantidades[index].value) || 1;
+
+                    total += preco * quantidade;
+                }
+            });
+
+            if (checkmark1.checked) {
+                total = total * 0.915;
+            } else {
+                let juros = total * 0.06;
+                let taxaParcelas = quantParcelas * 6.90;
+                
+                total = total + juros + taxaParcelas;
+                
+                let valorParcela = total / quantParcelas;
+
+                if (valorParcela < 10) {
+                    alert("A parcela é menor que R$10,00.\nMude a quantidade de parcelas ou a forma de pagamento");
+                    return;
+                }
+            }
+
+            valorTotal.textContent = total.toFixed(2);
+        }
+        
+        quantidades.forEach(qtd => {
+            qtd.addEventListener("input", calculoTotal);
+            qtd.disabled = true;
+        });
+
+        checkmark1.addEventListener("change", tipoPagamento);
+        checkmark1.addEventListener("change", calculoTotal);
+        checkmark2.addEventListener("change", tipoPagamento);
+        checkmark2.addEventListener("change", calculoTotal);
+        parcelas1.addEventListener("change", calculoTotal);
+
+        produtos.forEach((produto, index) => {
+
+            produto.addEventListener("change", () => {
+
+                if (produto.checked) {
+                    quantidades[index].disabled = false;
+                } else {
+                    quantidades[index].disabled = true;
+                    quantidades[index].value = ""; 
+                }
+
+            calculoTotal();
+            });
+        });
+
+        tipoPagamento();
+    </script>
+</body>
+</html>

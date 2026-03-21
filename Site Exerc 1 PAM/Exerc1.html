@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercíco Pam 1</title>
+</head>
+<body>
+    
+    <script>
+        function todoCalculo() {
+
+            const numuser1 = Number(document.getElementById("num1").value);
+            const numuser2 = Number(document.getElementById("num2").value);
+            const numuser3 = Number(document.getElementById("num3").value);
+            const numuser4 = Number(document.getElementById("num4").value);
+
+            const CalcMultx2 = numuser1 * 2;
+            const CalcMultx3 = numuser1 * 3;
+            const CalcMultx4 = numuser1 * 4;
+            const CalcMultx5 = numuser1 * 5;
+            const CalcMultx6 = numuser1 * 6;
+            const CalcElev2 = numuser1 ** 2;
+            const CalcElev3 = numuser1 ** 3; 
+            const CalcElev4 = numuser1 ** 4;
+            const CalcElev5 = numuser1 ** 5;
+            const CalcElev6 = numuser1 ** 6;
+            const CalcDelta = (numuser2 ** 2) - (4 * numuser1 * numuser3);
+            const CalcBhaskara = (-numuser2 + Math.sqrt(CalcDelta)) / (2 * numuser1);
+            const CalcBhaskara2 = (-numuser2 - Math.sqrt(CalcDelta)) / (2 * numuser1);
+            const CalcMedAritm = (numuser1 + numuser2 + numuser3 + numuser4) / 4;
+            let CalcParImpar1;
+            let CalcParImpar2;
+            let CalcParImpar3;
+            let CalcParImpar4;
+
+            if (CalcDelta < 0) {
+                document.getElementById("result11").innerHTML = "Bhaskara: Δ negativo, não possui raiz real";
+            } else {
+                const CalcBhaskara = (-numuser2 + Math.sqrt(CalcDelta)) / (2 * numuser1);
+                const CalcBhaskara2 = (-numuser2 - Math.sqrt(CalcDelta)) / (2 * numuser1);
+                document.getElementById("result11").innerHTML = `Bhaskara - Resultado: x1 = ${CalcBhaskara} | x2 = ${CalcBhaskara2}`;
+            }
+
+            if (numuser1 % 2 == 0) {
+                CalcParImpar1 = "Par";
+            } else if (numuser1 % 2 != 0) {
+                CalcParImpar1 = "Ímpar";
+            } else {
+                CalcParImpar1 = "Nulo";
+            }
+
+            if (numuser2 % 2 == 0) {
+                CalcParImpar2 = "Par";
+            } else if (numuser2 % 2 != 0) {
+                CalcParImpar2 = "Ímpar";
+            } else {
+                CalcParImpar2 = "Nulo";
+            }
+
+            if (numuser3 % 2 == 0) {
+                CalcParImpar3 = "Par";
+            } else if (numuser3 % 2 != 0) {
+                CalcParImpar3 = "Ímpar";
+            } else {
+                CalcParImpar3 = "Nulo";
+            }
+
+            if (numuser4 % 2 == 0) {
+                CalcParImpar4 = "Par";
+            } else if (numuser4 % 2 != 0) {
+                CalcParImpar4 = "Ímpar";
+            } else {
+                CalcParImpar4 = "Nulo";
+            }
+
+            document.getElementById("result1").innerHTML = "Dobro - Resultado: " + CalcMultx2;
+            document.getElementById("result2").innerHTML = "Triplo - Resultado: " + CalcMultx3;
+            document.getElementById("result3").innerHTML = "Quádruplo - Resultado: " + CalcMultx4;
+            document.getElementById("result4").innerHTML = "Quíntuplo - Resultado: " + CalcMultx5;
+            document.getElementById("result5").innerHTML = "Sêxtuplo - Resultado: " + CalcMultx6;
+            document.getElementById("result6").innerHTML = "Quadrado - Resultado: " + CalcElev2;
+            document.getElementById("result7").innerHTML = "Cubo - Resultado: " + CalcElev3;
+            document.getElementById("result8").innerHTML = "Quarta Potência - Resultado: " + CalcElev4;
+            document.getElementById("result9").innerHTML = "Quinta Potência - Resultado: " + CalcElev5;
+            document.getElementById("result10").innerHTML = "Sexta Potência - Resultado: " + CalcElev6;
+            document.getElementById("result11").innerHTML = `Bhaskara - Resultado: x1 = ${CalcBhaskara} | x2 = ${CalcBhaskara2}`;
+            document.getElementById("result12").innerHTML = "Média Aritmética - Resultado: " + CalcMedAritm;
+            document.getElementById("result13").innerHTML = `Par ou ímpar:<br>Número 1 = ${CalcParImpar1};<br>Número 2 = ${CalcParImpar2};<br>Número 3 = ${CalcParImpar3};<br>Número 4 = ${CalcParImpar4}`;
+        
+        }
+    </script>
+
+    <div id="div1" align="center">
+
+        <h2>Página para cálculos</h2>
+        <br><br>
+        <label for="num1">Número 1 - a: </label>
+        <input type="number" id="num1">
+        <label for="num2">Número 2 - b: </label>
+        <input type="number" id="num2">
+        <label for="num3">Número 3 - c: </label>
+        <input type="number" id="num3">
+        <label for="num4">Número 4: </label>
+        <input type="number" id="num4">
+        <br><br>
+        <button onclick="todoCalculo()">Clique</button>
+
+    </div>
+
+    <br><br>
+
+    <div id="div2" align="center">
+
+        <p id="result1">Dobro - Resultado: </p>
+        <br>
+        <p id="result2">Triplo - Resultado: </p>
+        <br>
+        <p id="result3">Quádruplo - Resultado: </p>
+        <br>
+        <p id="result4">Quíntuplo - Resultado: </p>
+        <br>
+        <p id="result5">Sêxtuplo - Resultado: </p>
+        <br>
+        <p id="result6">Quadrado - Resultado: </p>
+        <br>
+        <p id="result7">Cubo - Resultado: </p>
+        <br>
+        <p id="result8">Quarta Potência - Resultado: </p>
+        <br>
+        <p id="result9">Quinta Potência - Resultado: </p>
+        <br>
+        <p id="result10">Sexta Potência - Resultado: </p>
+        <br>
+        <p id="result11">Bhaskara - Resultado: </p>
+        <br>
+        <p id="result12">Média Aritmética - Resultado: </p>
+        <br>
+        <p id="result13">Par ou ímpar: </p>
+
+    </div>
+
+    
+</body>
+</html>
