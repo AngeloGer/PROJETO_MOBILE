@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar</title>
+    <link rel="stylesheet" href="Cascade.css">
+    <script src="Script.js" defer></script>
+</head>
+<body>
+    <form method="post" id="cadAluno">
+        <div class="campCad">
+            <h2 class="title1">Cadastro de alunos:</h2>
+            <label for="nomeAluno">Nome do Aluno:</label>
+            <input id="nomeAluno" type="text">
+            <label for="idadeAluno">Idade do Aluno:</label>
+            <input id="idadeAluno" type="number" min="1">
+            <label for="notaAluno">Nota do Aluno:</label>
+            <input id="notaAluno" type="number" placeholder="1" min="0" max="10">
+            <label for="descAluno">Informações sobre o aluno (opcional):</label>
+            <textarea id="descAluno"></textarea>
+            <button type="button" id="btnCadastro" onclick="cadastrarAluno()">Cadastrar</button>
+        </div>
+    </form>
+
+    <div class="container1">
+        <h2 class="title1">Tabela de alunos:</h2>
+        <div class="infoTurma">
+            <p>Total de alunos cadastrados: <span id="totalAlunoCad">0</span></p>
+            <p>Média das notas dos alunos: <span id="medNotaAluno">0</span></p>
+            <p>Alunos aprovados: <span id="totalAlunoApr">0</span></p>
+            <p>Alunos reprovados: <span id="totalAlunoRep">0</span></p>
+        </div>
+
+        <div class="listaAluno">
+            <table id="tabelaAlunos">
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Nota</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>
