@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja com carrinhos de compra</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- Esta atividade precisa de comentários explicando o código -->
+
+<!-- Título do site-->
+<div class="borderNormal">
+<p id="title1"> Site de Compras </p>
+</div>
+
+<!-- Filtragem de produtos -->
+<div class="filtroDiv">
+    <label for="filtroPreco">Filtrar: </label>
+    <select id="filtroPreco">
+        <!-- Opções -->
+        <option value="todos">Todos os produtos</option>
+        <option value="ate50">Produtos até R$ 50,00</option>
+        <option value="acima50">Produtos acima de R$ 50,00</option>
+    </select>
+</div>
+
+<!-- Divisão Principal-->
+<div class="principal">
+
+    <!-- Lista de produtos --> 
+    <div class="listProd">
+    </div>
+
+    <!-- Carrinho de compras -->
+    <div class="divCompra">
+        <div class="carCompra"> <!-- Divisão para o carrinho de compras -->
+            <span class="avisoCarrinho"></span>
+            <table id="tabelaItensCompra"> <!-- Tabela para exibir os itens do carrinho -->
+                <thead>
+                <tr>
+                    <th>Produto</th> <!-- Produto adicionado -->
+                    <th>Quantidade</th> <!-- Quantidade do produto -->
+                    <th>Valor</th> <!-- Valor do produto -->
+                    <th>Ações</th> <!-- Ações para o produto -->
+                </tr>
+                </thead>
+                <tbody id="corpoTabela"></tbody>
+            </table>
+        </div>
+        <div class="resCompra"> <!-- Resumo do pedido -->
+            <h3>Resumo:</h3>
+            <span class="total">R$ 0,00</span>
+            <button id="btnFinalizar">Finalizar pedido</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Angelo Gerola 2ºDS</p>
+</footer>
+
+</body>
+</html>
