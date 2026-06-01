@@ -80,8 +80,8 @@ body {
 /*Divisão da parte do carrinho e resumo do pedido*/
 .divCompra {
     display: flex;
-    min-width: 18vw;
-    max-width: 30vw;
+    min-width: 20vw;
+    max-width: 32vw;
 }
 
 /*Imagem dos produtos*/
@@ -105,7 +105,8 @@ body {
     border-radius: 4px;
     background-color: rgb(231, 231, 231);
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    width: 6vw;
 }
 
 button {
